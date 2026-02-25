@@ -74,6 +74,7 @@ Detects consecutive CAG repeats.
 
 
 Classifies repeat count:
+10-20 repears → high cancer risks
 27–35 repeats → Intermediate range
 36–39 repeats → Reduced penetrance range
 40 or more repeats → Disease-associated range
