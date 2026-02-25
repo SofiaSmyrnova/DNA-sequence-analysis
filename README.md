@@ -12,9 +12,9 @@ SET-UP:
 2. Place your sequence inside the input.txt file.
 
 
-Core Functionality — Version 1.0
+   Core Functionality — Version 1.0
 
-The program performs the following analyses:
+  The program performs the following analyses:
 
 Start Codon Validation
 
@@ -24,7 +24,7 @@ If not, a mutation warning is displayed.
 
 Stop Codon Detection
 
-Checks for valid stop codons: TAA, TAG, TGA.
+   Checks for valid stop codons: TAA, TAG, TGA.
 
 Warns if no stop codon is present.
 
@@ -36,7 +36,7 @@ Indicates potential truncated protein synthesis.
 
 Codon Frame Integrity
 
-Warns if total nucleotide count is not divisible by 3.
+   Warns if total nucleotide count is not divisible by 3.
 
 Detects incomplete final codons.
 
@@ -44,7 +44,7 @@ Ensures correct reading frame structure.
 
 Internal Start Codon Detection
 
-Detects additional ATG codons within the sequence.
+   Detects additional ATG codons within the sequence.
 
 May indicate alternative initiation sites.
 
@@ -72,16 +72,21 @@ CAG Trinucleotide Repeat Expansion Detection
 
 Detects consecutive CAG repeats.
 
+
 Classifies repeat count:
 27–35 repeats → Intermediate range
 36–39 repeats → Reduced penetrance range
 40 or more repeats → Disease-associated range
 
+
+
 Mimics pathological mechanisms observed in trinucleotide expansion disorders.
 
 
 
-Update — Version 1.2
+
+
+   Update — Version 1.2
 
 Version 1.2 introduces extended structural and molecular analysis features.
 
