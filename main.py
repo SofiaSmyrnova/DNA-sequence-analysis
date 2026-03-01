@@ -115,6 +115,16 @@ def main():
 
         codons, remainder = extract_codons(line)
 
+        #DNA to RNA transcription
+        cleaned_dna = "".join(c.upper() for c in line if c.upper() in {"A", "T", "G", "C"})
+
+        codon_count = len(cleaned_dna) // 3  # сколько ПОЛНЫХ кодонов
+        remainder = len(cleaned_dna) % 3  # остаток (0..2)
+
+        if codon_count <= 20:
+            rna = cleaned_dna.replace("T", "U")
+            print("RNA sequence:", rna)
+
         if not codons:
             print(f"No valid codons found in sequence #{seq_num}")
             continue
@@ -143,7 +153,7 @@ def main():
 
             if codons[last_index] in endcodons:
                 if remainder == 0:
-                    print("Valid stop codon at the end.")
+                    print(f"Valid stop codon at the end: the stop position is {last_index + 1} ")
                 else:
                     print("Stop codon is last full codon, BUT extra nucleotides remain after it (incomplete codon).")
             else:
@@ -213,3 +223,5 @@ if __name__ == "__main__":
         print(f"\nError has happened {e}")
         import traceback
         traceback.print_exc()
+
+        #перевод в рна. номер последнего кодона
