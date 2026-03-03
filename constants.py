@@ -1,0 +1,1 @@
+endcodons = {"TAA", "TAG", "TGA"}
